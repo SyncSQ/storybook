@@ -9,7 +9,7 @@ import { EVENTS } from '../constants';
 
 jest.mock('@storybook/manager-api');
 
-global.ResizeObserver = require('resize-observer-polyfill');
+globalThis.ResizeObserver = require('resize-observer-polyfill');
 
 const mockedApi = api as jest.Mocked<typeof api>;
 
