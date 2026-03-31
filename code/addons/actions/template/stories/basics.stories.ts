@@ -32,7 +32,7 @@ export const TypeUndefined = {
   args: { onClick: () => action('onClick')(undefined) },
 };
 export const TypeNaN = {
-  args: { onClick: () => action('onClick')(NaN) },
+  args: { onClick: () => action('onClick')(Number.NaN) },
 };
 export const TypeInfinity = {
   args: { onClick: () => action('onClick')(Infinity) },
