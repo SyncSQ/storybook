@@ -60,8 +60,7 @@ describe('Vision Simulator', () => {
     // then
     const rule = Object.values(document.styleSheets)
       .filter(({ cssRules }) => cssRules)
-      .map(({ cssRules }) => Object.values(cssRules))
-      .flat()
+      .flatMap(({ cssRules }) => Object.values(cssRules))
       // @ts-expect-error (TODO)
       .find((cssRule: CSSRule) => cssRule.selectorText === '#storybook-preview-iframe');
 
