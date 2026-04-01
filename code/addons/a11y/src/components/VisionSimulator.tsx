@@ -100,7 +100,7 @@ const getColorList = (active: Filter, set: (i: Filter) => void): Link[] => [
       ]
     : []),
   ...baseList.map((i) => {
-    const description = i.percentage !== undefined ? `${i.percentage}% of users` : undefined;
+    const description = i.percentage === undefined ? undefined : `${i.percentage}% of users`;
     return {
       id: i.name,
       title: (
